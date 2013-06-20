@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Brass Goggles - {% block title %}{% endblock %}</title>
+
+        <link rel="stylesheet" href="{% static "lib/css/normalize.css" %}">
+        <link rel="stylesheet" href="{% static "lib/css/kickstart.css" %}">
+        <link rel="stylesheet" href="{% static "lib/css/brassgoggles.css" %}">
+
+        <script src="{% static "lib/js/jquery-1.10.1.min.js" %}"></script>
+        <script src="{% static "lib/js/kickstart.js" %}"></script>
+
+        {% block header_js %}{% endblock %}
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to use this webpage.</p>
+        <![endif]-->
+
+        {% block content %}{% endblock %}
+
+        <p>Also some kind of footer probably is appropriate.</p>
+    </body>
+</html>

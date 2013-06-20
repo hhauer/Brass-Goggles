@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', 'Laboratory.views.index'),
     # Examples:
     # url(r'^$', 'BrassGoggles.views.home', name='home'),
     # url(r'^BrassGoggles/', include('BrassGoggles.foo.urls')),
