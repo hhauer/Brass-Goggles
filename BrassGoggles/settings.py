@@ -108,6 +108,7 @@ ROOT_URLCONF = 'BrassGoggles.urls'
 WSGI_APPLICATION = 'BrassGoggles.wsgi.application'
 
 TEMPLATE_DIRS = (
+    'C:/DEV/BrassGoggles/BrassGoggles/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -156,6 +157,8 @@ LOGGING = {
         },
     }
 }
+
+LOGIN_REDIRECT_URL = '/'
 
 # Registration settings.
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
