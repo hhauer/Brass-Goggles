@@ -1,0 +1,10 @@
+{% extends "lib/base.html" %}
+
+{% block title %}Periodic Table{% endblock %}
+
+{% block content %}
+<h3>{{ element.symbol }}</h3> <br />
+{{ element.name }} <br />
+{{ element.number }} - {{ element.weight }} <br />
+
+{% endblock %}

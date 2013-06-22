@@ -2,4 +2,17 @@
 
 {% block title %}Index{% endblock %}
 
-{% block content %}<p>Here we have some body content.</p>{% endblock %}
+{% block content %}<p>Here we have some body content.</p>
+
+
+
+<div class="inventory">
+	<h4>Inventory</h4>
+{% for item in inventory %}
+<div class="col_3">
+	{{ item.type.name }} <br/>
+	{{ item.amount }}
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "lib/base.html" %}
+
+{% block title %}Periodic Table{% endblock %}
+
+{% block content %}
+	<h4>Periodic Table</h4>
+{% for elem in elements %}
+<div class="col_2">
+	<h5><a href="{% url 'Laboratory.views.element_detail' elem.name %}">{{ elem.symbol }}</a></h5> <br />
+	{{ elem.name }} <br />
+	{{ elem.number }} - {{ elem.weight }} <br />
+</div>
+{% endfor %}
+
+{% endblock %}

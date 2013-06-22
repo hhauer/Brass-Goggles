@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'registration', # PIP
+    'south', # PIP
     
 
     'Laboratory',
