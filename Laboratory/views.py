@@ -4,9 +4,13 @@ from models import Resource, Element
 
 @login_required
 def index(request):
-    inventory = Resource.objects.filter(user=request.user)
-    return render(request, 'Laboratory/index.html', {'inventory':inventory})
+    return render(request, 'Laboratory/index.html')
 
+@login_required
+def inventory(request):
+    inventory = Resource.objects.filter(user=request.user)
+    return render(request, 'Laboratory/inventory.html', {'inventory':inventory})
+    
 def periodic_table(request):
     elements = Element.objects.all()
     return render(request, "Laboratory/periodic_table.html", {'elements': elements})

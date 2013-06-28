@@ -13,20 +13,29 @@
         <script src="{% static "lib/js/jquery-1.10.1.min.js" %}"></script>
         <script src="{% static "lib/js/kickstart.js" %}"></script>
 
+        <script>
+        $(function() {
+            $("#navbar a[href='"+window.location.pathname+"']").parent().addClass('current');
+        });
+        </script>
+
         {% block header_js %}{% endblock %}
     </head>
     <body>
         <!--[if lt IE 7]>
             <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to use this webpage.</p>
         <![endif]-->
-
-        <div class="grid flex">
-        {% block content %}{% endblock %}
-
-        <br />
-        <p>Also some kind of footer probably is appropriate.</p>
+        <div id="header">
+            Sample Header
         </div>
 
-        
+        <div id="container" class="grid flex">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div class="clear"></div>
+            
+        <div id="footer">Sample Footer</div>
+
     </body>
 </html>

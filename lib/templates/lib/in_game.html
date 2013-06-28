@@ -1,0 +1,15 @@
+{% extends "lib/base.html" %}
+
+{% block content %}
+<div id="navbar" class="col_2">
+	<ul class="menu vertical">
+		<li><a href="/">My Laboratory</a></li>
+		<li><a href="/laboratory/periodic_table/">Periodic Table</a></li>
+		<li><a href="/laboratory/inventory/">Inventory</a></li>
+	</ul>
+</div>
+
+<div class="col_10">
+{% block game_content %}{% endblock %}
+</div>
+{% endblock %}

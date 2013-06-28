@@ -1,0 +1,17 @@
+{% extends "lib/in_game.html" %}
+
+{% block title %}Inventory{% endblock %}
+
+{% block game_content %}
+
+<div class="inventory">
+	<h4>Inventory</h4>
+	{% for item in inventory %}
+	<div class="col_3">
+		{{ item.type.name }} <br/>
+		{{ item.amount }}
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}
