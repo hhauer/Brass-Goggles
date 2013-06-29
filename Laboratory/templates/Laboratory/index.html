@@ -18,6 +18,7 @@
 </div>
 {% endif %}
 
+{% if in_production %}
 <div class="production">
 <h4>Resources in Production</h4>
 	{% for product in in_production %}
@@ -26,5 +27,6 @@
 	</div>
 	{% endfor %}
 </div>
+{% endif %}
 
 {% endblock %}

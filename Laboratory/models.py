@@ -23,8 +23,8 @@ class Resource(models.Model):
     amount = models.IntegerField()
     
     def __unicode__(self):
-        return self.user.username + ' - ' + self.type.name
-    
+        return self.type.name
+
     class Meta:
         unique_together = ('type', 'user')
 
@@ -67,8 +67,8 @@ class ProductionEvent(models.Model):
     product = models.ForeignKey(Element, related_name='+')
     product_amount = models.IntegerField()
     
-    byproduct = models.ForeignKey(Element, related_name='+', null=True)
-    byproduct_amount = models.IntegerField(null=True)
+    byproduct = models.ForeignKey(Element, related_name='+', null=True, blank=True)
+    byproduct_amount = models.IntegerField(null=True, blank=True)
     
     finished = models.DateTimeField()
     
