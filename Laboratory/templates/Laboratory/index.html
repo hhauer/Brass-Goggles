@@ -9,4 +9,24 @@
 {% block game_content %}<p>Here we have some body content.</p>
 
 
+{% if produced %}
+<div class="production-finished">
+<h4>Production Finished</h4>
+	{% for product in produced %}
+	<p>{{ product }}</p>
+	{% endfor %}
+</div>
+{% endif %}
+
+{% if in_production %}
+<div class="production">
+<h4>Resources in Production</h4>
+	{% for product in in_production %}
+	<div class="product">
+		<p>{{ product.product.name }} will be complete at {{ product.finished }}</p>
+	</div>
+	{% endfor %}
+</div>
+{% endif %}
+
 {% endblock %}
