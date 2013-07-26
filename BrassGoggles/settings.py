@@ -128,6 +128,7 @@ INSTALLED_APPS = (
 
     'Laboratory',
     'lib',
+    'private_api',
 )
 
 # A sample logging configuration. The only tangible logging
