@@ -2,7 +2,8 @@ from django.contrib.auth.decorators import permission_required
 from django.http import HttpResponse
 from models import GameTask
 
-@permission_required('private_api.change_gametask')
+# Can't really test permissions fully until locked behind Apache for HTTP Auth handling.
+#@permission_required('private_api.change_gametask')
 def gametask_api(request, game_name, task_id, status):
     try:
         game = GameTask.objects.get(pk=task_id)
